@@ -1,0 +1,25 @@
+.img-jumbo {
+  background-image: url(../GAMBAR/library.jpg);
+  height: 50vh;
+  background-size: cover;
+}
+
+.box {
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 100%;
+  width: 100%;
+  font-size: 6em;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.box-link {
+  height: 100px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
