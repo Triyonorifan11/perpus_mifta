@@ -29,10 +29,7 @@ if (isset($_SESSION["email"])) {
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <form class="d-flex  me-auto " role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-primary " type="submit"><i class="bi bi-search"></i></button>
-                </form>
+                <h5 class="me-auto">LIBRARY-SUMBER PENGETAHUAN</h5>
                 <ul class="navbar-nav mb-2 mb-lg-0">
                     <li class="nav-item d-flex">
                     </li>
@@ -45,7 +42,7 @@ if (isset($_SESSION["email"])) {
                     <?php if (isset($_SESSION["email"])) : ?>
                         <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="dropdownMenu2">
                             <li><a href="logout.php" class="dropdown-item">Logout</a></li>
-                            <li><button class="dropdown-item" type="button">Setting</button></li>
+                            <li><a href="resetPasword.php?user=<?= $id; ?>" class="dropdown-item">Reset Password</a></li>
                             <!-- <li><button class="dropdown-item" type="button">Something else here</button></li> -->
                         </ul>
                     <?php endif ?>

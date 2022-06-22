@@ -9,7 +9,13 @@ if (!isset($_SESSION["username"])) {
 }
 $id = $_GET["admin"];
 
-$tamu = query("SELECT * FROM pengunjung");
+if (isset($_GET["tanggal_hadir"])) {
+    $tanggal = $_GET["tanggal_hadir"];
+    $tamu = query("SELECT * FROM pengunjung WHERE tgl_hadir='$tanggal'");
+} else {
+    $tamu = query("SELECT * FROM pengunjung");
+}
+
 ?>
 
 <div class="container">
@@ -17,10 +23,15 @@ $tamu = query("SELECT * FROM pengunjung");
         <h1 class="mt-4">Buku Tamu || Pengunjung</h1>
     </div>
 
-    <form action="" method="post">
+    <form action="" method="GET">
         <div class="col-3 d-flex">
-            <input type="date" id="Tanggal-lahir" class="form-control" aria-describedby="passwordHelpInline" required>
-            <button class="btn btn-outline-success mx-2" type="submit"><i class="bi bi-search"></i></button>
+            <input type="hidden" value="<?= $id; ?>" name="admin">
+            <input type="hidden" value="true" name="filter">
+            <input type="date" value="<?= $tanggal; ?>" name="tanggal_hadir" class="form-control" aria-describedby="passwordHelpInline" required>
+            <button class="btn btn-outline-primary mx-2" type="submit"><i class="bi bi-search"></i></button>
+            <?php if (isset($_GET["filter"])) : ?>
+                <a href="lihat_buku_tamu.php?admin=<?= $id; ?>" class="btn btn-danger">Reset</a>
+            <?php endif; ?>
         </div>
     </form>
 
@@ -49,10 +60,6 @@ $tamu = query("SELECT * FROM pengunjung");
                                 <td><?= $pengunjung['no_telp']; ?></td>
                                 <td><?= $pengunjung['tgl_hadir']; ?></td>
                                 <td><?= $pengunjung['jam_hadir']; ?></td>
-                                <!-- <td>
-                                    <a href="edit_buku.php?admin=<?= $id; ?>&id=<?= $pengunjung["id"]; ?>" class="btn btn-sm btn-secondary">Edit</a>
-                                    <a href="delete_buku.php?admin=<?= $id; ?>&id=<?= $pengunjung["id"]; ?>" class="btn btn-sm btn-danger" onclick="return confirm('Yakin Menaghapus data ini?');">Hapus</a>
-                                </td> -->
                             </tr>
                         <?php endforeach; ?>
 

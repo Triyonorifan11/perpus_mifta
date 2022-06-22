@@ -25,10 +25,7 @@ $books = query("SELECT DISTINCT kategori FROM buku");
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <form class="d-flex  me-auto " role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success " type="submit"><i class="bi bi-search"></i></button>
-                </form>
+                <h5 class="me-auto">LIBRARY-SUMBER PENGETAHUAN</h5>
                 <ul class="navbar-nav mb-2 mb-lg-0">
                     <li class="nav-item d-flex">
                         <a href="ANGGOTA/login_anggota.php" class="btn btn-sm btn-outline-primary" aria-current="page" href="#">Login Member</a>
@@ -51,12 +48,7 @@ $books = query("SELECT DISTINCT kategori FROM buku");
         <div class="row ">
             <div class="col-lg-12">
                 <div class=" d-lg-flex d-md-grid">
-                    <div class="col-lg-3 col-md-6 p-3">
-                        <h3>Pengumuman</h3>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam qui iste porro temporibus dicta. Sint maxime laudantium dicta aliquid quibusdam optio libero, similique velit nostrum sed dolore rem veritatis nemo.</p>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 p-3">
+                    <div class="col-lg-4 col-md-6 p-3">
                         <h3>Koleksi</h3>
 
                         <?php $i = 1 ?>
@@ -65,7 +57,7 @@ $books = query("SELECT DISTINCT kategori FROM buku");
                         <?php endforeach; ?>
                     </div>
 
-                    <div class="col-lg-3 col-md-6 p-3">
+                    <div class="col-lg-4 col-md-6 p-3">
                         <h3>Kontak Kami</h3>
                         <ul>
                             <li>WA : 085655624796 (Admin)</li>
@@ -73,7 +65,7 @@ $books = query("SELECT DISTINCT kategori FROM buku");
                         </ul>
                     </div>
 
-                    <div class="col-lg-3 col-md-6 p-3">
+                    <div class="col-lg-4 col-md-6 p-3">
                         <h3>Jam Operasional</h3>
                         <ul>
                             <li>Senin : 08.00-15.00 WIB</li>

@@ -96,6 +96,7 @@ function updateBuku($data)
 function createTamu($data)
 {
     global $conn;
+    date_default_timezone_set('Asia/Jakarta');
     $nama = htmlspecialchars($data["nama"]);
     $alamat = htmlspecialchars($data["alamat"]);
     $telepon = htmlspecialchars($data["telepon"]);
@@ -161,6 +162,17 @@ function update_status_peminjaman($id)
     $query = "UPDATE peminjaman SET status = 1 WHERE id_peminjaman = $id";
     mysqli_query($conn, $query);
 
+
+    return mysqli_affected_rows($conn);
+}
+
+// reset password anggota
+function resetPasword($id, $data)
+{
+    global $conn;
+    $password = $data["password_baru"];
+    $query = "UPDATE anggota SET password = '$password' WHERE id_anggota = $id";
+    mysqli_query($conn, $query);
 
     return mysqli_affected_rows($conn);
 }

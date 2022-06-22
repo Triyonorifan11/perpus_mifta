@@ -9,14 +9,14 @@ if (deleteBuku($id_buku) > 0) {
     echo "
 <script>
     alert('data berhasil dihapus');
-    document.location.href = 'daftar_buku.php?admin=<?= $id; ?>';
+    document.location.href = 'daftar_buku.php?admin=$id';
 </script>
 ";
 } else {
     echo "
 <script>
     alert('data Errorr !!');
-    document.location.href = 'daftar_buku.php?admin=<?= $id; ?>';
+    document.location.href = 'daftar_buku.php?admin=$id';
 </script>
 ";
     echo mysqli_error($conn);
