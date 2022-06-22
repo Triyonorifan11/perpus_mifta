@@ -34,7 +34,7 @@ $absen_anggota = query("SELECT * from anggota WHERE id_anggota=$id")[0];
 
     <div class="d-flex justify-content-center">
 
-        <div class="col-lg-8 col-sm-12 col-md-12">
+        <div class="col-lg-8 col-sm-12">
             <div class="card mt-4">
                 <div class="card-body">
                     <form method="POST">

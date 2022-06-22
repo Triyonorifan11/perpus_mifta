@@ -81,7 +81,7 @@ $id = $_GET["admin"];
 
         <!-- card 5 -->
         <div class="col-lg-6 col-sm-12 mb-4">
-            <div class="card">
+            <div class="card" style="margin-bottom: 10rem;">
                 <div class="card-body">
                     <div class="d-flex justify-content-center m-4">
                         <img src="../GAMBAR/open-book.png" class="me-5" alt="" width="100px">
